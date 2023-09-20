@@ -1,0 +1,268 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#map{
+    float: right;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.option{
+    overflow-y: scroll;
+    width: 25%;
+    height: 100vh;
+    transform: translateX(0);
+    transition: 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.move .option{
+    transform: translateX(-100%);
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    background: #74C0D8;
+}
+
+.content p{
+    color: #FFFFFF;
+    font-size: 36px;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.content .right p{
+    font-size: 16px;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.right span{
+    font-size: 28px;
+    color: #E7F161;
+}
+
+form{
+    padding: 10px 0px;
+    display: flex;
+    background: #74C0D8;
+}
+
+form select{
+    text-align: center;
+    width: 45%;
+    height: 32px;
+    font-size: 18px;
+    margin-left: 12.5px;
+    border-radius: 50px;
+}
+
+.searchbar{
+    text-align: center;
+    position: relative;
+    height: 60px;
+    background: #74C0D8;
+}
+
+.search{
+    text-indent: 10px;
+    font-size: 24px;
+    width: 90%;
+    height: 48px;
+    border-radius: 25px;
+}
+
+.bar{
+    font-size: 24px;
+    height: 32px;
+    color: #BDBDBD;
+    text-decoration: none;
+    position: absolute;
+    top: 12px;
+    right: 50px;
+}
+
+.preset{
+    background: #FFFFFF;
+    height: 81.2%;
+}
+
+.maskcontent{
+    background: #FFFFFF;
+}
+
+.farme{
+    border-bottom: solid 1px #E5E5E5;
+    padding: 10px;
+    position: relative;
+}
+
+.pharmacy{
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.pharmacy a{
+    font-size: 24px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+}
+
+.pharmacy a:hover{
+    color: orange;
+}
+
+.quantity{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.adult{
+    width: 45%;
+    font-weight: bolder;
+    color: #FFFFFF;
+    background: #74C0D8;
+    padding: 0 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.child{
+    width: 45%;
+    font-weight: bolder;
+    color: #FFFFFF;
+    background: #FFA573;
+    padding: 0 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    width: 1%;
+    height: 60px;
+    position: absolute;
+    transform: translateX(0);
+    transition: 1s;
+    left: 25%;
+    top: 175px;
+    z-index: 2;
+}
+
+.toggle a{
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #74C0D8;
+    display: block;
+}
+
+.move .toggle{
+    transform: translateX(-2500%);
+}
+
+.leaflet-control-zoom {
+    position: absolute;
+    left: 400px;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.move .leaflet-control-zoom{
+    transform: translateX(-480px);
+}
+
+@media (max-width:768px){
+    .option{
+        width: 40%;
+    }
+    .toggle{
+        width: 3%;
+        top: 26.9%;
+        left: 40%;
+    }
+    .move .toggle{
+        transform: translatex(-1340%);
+    }
+
+    .leaflet-control-zoom{
+        left: 300px;
+        transform: translateX(0);
+    }
+
+    .move .leaflet-control-zoom{
+        transform: translateX(-300px);
+    }
+}
